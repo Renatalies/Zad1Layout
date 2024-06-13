@@ -1,0 +1,41 @@
+﻿<Window x:Class="Zad1Layout.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Zadanie 1 - Layout i Zasoby" Height="300" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <WrapPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Przycisk 1" Style="{StaticResource StylPrzyciskuSpecjalny}"/>
+            <Separator Width="10"/>
+            <Button Content="Przycisk 2" Style="{StaticResource StylPrzyciskuSpecjalny}"/>
+            <Separator Width="10"/>
+            <Button Content="Przycisk 3" Style="{StaticResource StylPrzyciskuSpecjalny}"/>
+        </WrapPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top">
+            <Label Content="Grupa 1" Style="{StaticResource EtykietaA}"/>
+            <Label Content="Grupa 2" Style="{StaticResource EtykietaA}"/>
+            <Label Content="Grupa 3" Style="{StaticResource EtykietaB}"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="131*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="300*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>
